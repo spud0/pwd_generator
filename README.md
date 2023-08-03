@@ -7,9 +7,13 @@ Linux distributions come with a file that contains A LOT of english words. By se
 The file is located at '/usr/share/dict/words'. 
 
 ## Why? The Inspiration: 
-I read an article [here.] (https://www.ncsc.gov.uk/blog-post/the-logic-behind-three-random-words)
+I read an article [here.](https://www.ncsc.gov.uk/blog-post/the-logic-behind-three-random-words) This article basically detailed the idea that 3 random words for a password is the ideal length and provides optimal security. 
 
 ## TODO: 
-- Add GUI using GTK
+- Link GUI with passwd.py file 
+- Fix the main.py file
 - Finish working on the word cleaning 
 - Make a cache for the passwords
+
+## Links: 
+Here are the links to the documentation of the modules that I used in this project. 
