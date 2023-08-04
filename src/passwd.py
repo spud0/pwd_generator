@@ -1,7 +1,3 @@
-"""
-    The code here is an offshoot of the Password Generator on repl.it, this code contains the     important details pertinent to the implementation. 
-"""
-
 import random
 import time
 import sys
@@ -10,7 +6,7 @@ import sys
 all_word_choices = []
 generated_pwd = []
 
-with open("usr/share/dict/words", 'r') as word_choices: 
+with open("/usr/share/dict/words", 'r') as word_choices: 
     while True: 
 
         raw_word = word_choices.readline()
@@ -36,7 +32,7 @@ def clean_word(w: str) -> str:
     
     return new_w
 
-def select_word(l : List[str]) -> str:
+def select_word(l : list[str]) -> str:
     w = random.choice(l)
     return w
 
