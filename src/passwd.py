@@ -1,6 +1,4 @@
 import random
-import time
-import sys
 
 all_word_choices = []
 
