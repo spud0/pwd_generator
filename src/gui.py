@@ -60,8 +60,7 @@ class MainWindow(Gtk.Window):
             self.password_display.set_text(self.pwd)
         
         except ValueError as e: 
-            string = "Error: "
-            string += str(e)
+            string = "Error: Non Number Input, Invalid Type Integer."
             self.password_display.set_text(string)
         
 
