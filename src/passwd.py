@@ -43,6 +43,9 @@ def generate_pwd(length: int) -> str:
     pwd = "".join(generated_pwd)
     return pwd
 
+def remove_nums(w: str) -> str:
+    res = "".join(filter(lambda c: not c.isdigit(), w))
+    return res
 
 
 
