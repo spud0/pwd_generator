@@ -1,7 +1,7 @@
 import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
-from passwd import generate_pwd, prefix_pwd_with_num, suffix_pwd_with_num
+from passwd import generate_pwd, prefix_pwd_with_num, suffix_pwd_with_num, remove_nums
 
 class MainWindow(Gtk.Window):
     # The constructor of the parent class 
@@ -61,21 +61,25 @@ class MainWindow(Gtk.Window):
         
         else: 
             print("Errror with input: "  + str(self.length))
-        if len(self.pwd) > 0: 
-            self.num_words.set_editable(False)
+        
 
     def on_prefix_pwd_toggled(self, button):
         if button.get_active():
-           self.pwd = prefix_pwd_with_num(self.pwd)
+            self.pwd = prefix_pwd_with_num(self.pwd)
+            self.password_display.set_text(self.pwd)
         
-
+        else:
+            self.pwd = remove_nums(self.pwd)
+            self.password_display.set_text(self.pwd)
 
     def on_suffix_pwd_toggled(self, button):
         if button.get_active():
             self.pwd = suffix_pwd_with_num(self.pwd)
+            self.password_display.set_text(self.pwd)
 
-
-
+        else: 
+            self.pwd = remove_nums(self.pwd)
+            self.password_display.set_text(self.pwd)
 m = MainWindow()
 m.connect("destroy", Gtk.main_quit)
 m.show_all()
