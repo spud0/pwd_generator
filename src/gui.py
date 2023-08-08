@@ -19,18 +19,12 @@ class MainWindow(Gtk.Window):
         # Number of words in Password 
         self.num_words = Gtk.Entry()
         self.num_words.set_text("")
+        self.num_words.set_editable(True)
+
 
         # Field for the password
         self.password_display = Gtk.Entry()
         self.password_display.set_editable(False)
-
-        # If the user input isn't a number, throw exception
-        try:
-            self.length = self.num_words.get_text() 
-
-        except Exception as e: 
-            self.num_words.set_text("Error: {}".format(e))
-            self.num_words.set_editable(False)
 
         # Buttons for Password Generation and Modification
         self.generate_pwd_button = Gtk.Button(label = "Generate Password")
@@ -57,9 +51,16 @@ class MainWindow(Gtk.Window):
     
         # Password Generator, and Modifiers
     def on_generate_pwd_button_clicked(self, widget):
-        self.pwd = generate_pwd(self.length)
-        self.password_display.set_text(self.pwd)
+        
+        self.length = self.num_words.get_text()
 
+        if (int(self.length)): 
+            self.length = int(self.length)
+            self.pwd = generate_pwd(self.length)
+            self.password_display.set_text(self.pwd)
+        
+        else: 
+            print("Errror with input: "  + str(self.length))
         if len(self.pwd) > 0: 
             self.num_words.set_editable(False)
 
