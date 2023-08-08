@@ -54,13 +54,15 @@ class MainWindow(Gtk.Window):
         
         self.length = self.num_words.get_text()
 
-        if (int(self.length)): 
+        try: 
             self.length = int(self.length)
             self.pwd = generate_pwd(self.length)
             self.password_display.set_text(self.pwd)
         
-        else: 
-            print("Errror with input: "  + str(self.length))
+        except ValueError as e: 
+            string = "Error: "
+            string += str(e)
+            self.password_display.set_text(string)
         
 
     def on_prefix_pwd_toggled(self, button):
