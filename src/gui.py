@@ -91,7 +91,3 @@ class MainWindow(Gtk.Window):
             self.pwd_display.set_text(self.pwd)
 
 
-m = MainWindow()
-m.connect("destroy", Gtk.main_quit)
-m.show_all()
-Gtk.main()
