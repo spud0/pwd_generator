@@ -16,6 +16,10 @@ class MainWindow(Gtk.Window):
         self.title.set_text("Password Output")
         self.title.set_hexpand(True)
 
+        self.pwd_length_label = Gtk.Label()
+        self.pwd_length_label.set_text("Number of words in Password")
+        self.pwd_length_label.set_hexpand(True)
+
         # Containers 
         grid = Gtk.Grid()
         
@@ -24,7 +28,6 @@ class MainWindow(Gtk.Window):
         self.num_words.set_text("")
         self.num_words.set_editable(True)
         self.num_words.set_max_length(1)
-
 
         # Text field for the password
         self.pwd_display = Gtk.Entry()
@@ -52,6 +55,7 @@ class MainWindow(Gtk.Window):
         grid.attach(self.generate_pwd_button, 2, 3, 1, 1)
         grid.attach(self.prefix_pwd, 1, 7, 1, 1) 
         grid.attach(self.suffix_pwd, 4, 7, 1, 1)
+        grid.attach(self.pwd_length_label, 2, 6, 1, 1)
         grid.attach(self.num_words,  2, 7, 1, 1) 
         self.add(grid)
     
