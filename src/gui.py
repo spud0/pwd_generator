@@ -62,7 +62,7 @@ class MainWindow(Gtk.Window):
         except ValueError as e: 
             string = "Error: Non Number Input, Invalid Type Integer."
             self.password_display.set_text(string)
-            print(str(e))
+            # print(str(e))
         
 
     def on_prefix_pwd_toggled(self, button):
