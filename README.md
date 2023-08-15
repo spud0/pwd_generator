@@ -19,8 +19,8 @@ Below is a GIF of the project.
 
 ## Links: 
 Here are the links to the documentation of that I used in this project. 
-[Python Random Module](https://docs.python.org/3/library/random.html)
-[Python Type Hints](https://docs.python.org/3/library/typing.html)
-[Python GTK](https://python-gtk-3-tutorial.readthedocs.io/en/latest/index.html)
+- [Python Random Module](https://docs.python.org/3/library/random.html)
+- [Python Type Hints](https://docs.python.org/3/library/typing.html)
+- [Python GTK](https://python-gtk-3-tutorial.readthedocs.io/en/latest/index.html)
 
 
