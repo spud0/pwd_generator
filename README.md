@@ -13,6 +13,8 @@ I read an article [here.](https://www.ncsc.gov.uk/blog-post/the-logic-behind-thr
 
 ![Image of randomly-generated password.](https://i.pcmag.com/imagery/articles/0208Oq8I8emdjqU8ulGdzNT-5..v1648744458.png)
 
+Also note that even though it says Chrome will remember the password, some people do say that browsers aren't too [secure.](https://blog.lastpass.com/2022/06/why-you-shouldnt-store-passwords-in-a-browser/) This is written by a company that sells a password manager though... 
+
 ## How it Looks:
 Below is a GIF of the project.
 ![GIF of the project](assets/passwd.gif)
